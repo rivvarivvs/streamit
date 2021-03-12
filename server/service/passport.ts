@@ -10,7 +10,7 @@ passport.serializeUser((user, cb) => {
     cb(null, user)
 })
 
-passport.deserializeUser((obj, cb) => {
+passport.deserializeUser((obj: any, cb) => {
     cb(null, obj)
 })
 
@@ -19,7 +19,7 @@ passport.use('localRegister', new LocalStrategy({
     username: 'email',
     password: 'password',
     passReqToCallback: true
-}, async (req: Request, email, password, done) => {
+}, async (req: Request, email: string, password: string) => {
     const existingUser = await User.findOne({ $or: [{email: email}, {username: req.body.username}]})
 
     if (existingUser) {
@@ -41,7 +41,7 @@ passport.use('localLogin', new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password',
     passReqToCallback: true
-}, async (req: Request, email, password, done) => {
+}, async (req: Request, email: string, password: string, done: any) => {
     const user = await User.findOne({ email })
 
     if (!user) {
