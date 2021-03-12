@@ -1,7 +1,15 @@
 ## Name and Description
-***streamit***: small implementation of a streaming service in node.js
+**streamit** - a small implementation of a streaming service in nodeJS
 
 ## Project Purpose and Goal
+
+#### Features:
+
+- [ ] basic authentication (in progress)
+- [ ] rtmp server in nodeJS
+- [ ] ability to show livestreams
+- [ ] generating streaming keys to streamers
+- [ ] generating live stream thumbnails
 
 ## Web Stack and Explanation
 
