@@ -6,7 +6,7 @@ import middleware from 'connect-ensure-login'
 const FileStore = require('session-file-store')(Session)
 import flash from 'connect-flash'
 import path from 'path'
-import config from './config/default'
+import { config } from './config/default'
 
 const {passport} = require('./service/passport') // to do   
 

@@ -9,7 +9,22 @@ interface UserAttrs {
     email: string;
     password: string;
     stream_key: string;
-  }
+}
+
+// An interface that describes the properties
+// that a User Model has
+interface UserModel extends mongoose.Model<UserDoc> {
+    build(attrs: UserAttrs): UserDoc;
+}
+  
+// An interface that describes the properties
+// that a User Document has
+interface UserDoc extends mongoose.Document {
+    username: string;
+    email: string;
+    password: string;
+    stream_key: string;
+}
 
 
 const userSchema = new mongoose.Schema ({
@@ -20,12 +35,12 @@ const userSchema = new mongoose.Schema ({
 })
 
 userSchema.methods.generateHash = (password) => {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null)
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(8))
 }
 
-userSchema.methods.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password)
-}
+// userSchema.methods.validPassword = function(password) {
+//     return bcrypt.compareSync(password, this.password)
+// }
 
 userSchema.methods.generateStreamKey = () => {
     return nanoid()
@@ -35,6 +50,6 @@ userSchema.statics.build = (attrs: UserAttrs) => {
     return new User(attrs)
 }
 
-const User = mongoose.model<any, any>("User", userSchema)
+const User = mongoose.model<UserDoc, any>("User", userSchema)
 
 export { User }

@@ -1,3 +1,5 @@
-module.exports.config = {
-
+export const config = {
+    server: {
+        secret: ''
+    }
 }
