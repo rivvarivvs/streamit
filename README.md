@@ -12,11 +12,11 @@
 - [ ] generating live stream thumbnails
 
 ## Web Stack and Explanation
-https://img.shields.io/badge/UI-React-red
-https://img.shields.io/badge/Code-TypeScript-lightblue
-https://img.shields.io/badge/Code-nodeJS-lightgreen
-https://img.shields.io/badge/Web%20server-Express-green
-https://img.shields.io/badge/Database-MongoDB-yellow
+![](https://img.shields.io/badge/UI-React-red)
+![](https://img.shields.io/badge/Code-TypeScript-lightblue)
+![](https://img.shields.io/badge/Code-nodeJS-lightgreen)
+![](https://img.shields.io/badge/Web%20server-Express-green)
+![](https://img.shields.io/badge/Database-MongoDB-yellow)
 
 ## Problems and Thought Process
 
