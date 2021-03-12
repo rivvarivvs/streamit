@@ -1,4 +1,4 @@
-import express from 'express'
+import express, {Request, Response, NextFunction, Errback} from 'express'
 import Session from 'express-session'
 import bodyParse from 'body-parser'
 import mongoose from 'mongoose'
@@ -34,5 +34,9 @@ app.use(FileStore({
     secret: config.server.secret,
     maxAge : Date.now() + (60 * 1000 * 30)
 }))
+
+app.use(function(err: Errback, req: Request, res: Response, next: NextFunction) {
+    console.log(err);
+});
 
 app.listen(port, () => console.log(`Listening on port ${port}`))
