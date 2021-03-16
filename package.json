@@ -39,6 +39,7 @@
     "shortid": "^2.2.16"
   },
   "dependencies": {
-    "@types/bcryptjs": "^2.4.2"
+    "@types/bcryptjs": "^2.4.2",
+    "node-media-server": "^2.2.4"
   }
 }

@@ -5,9 +5,9 @@
 
 #### Features:
 
-- [ ] basic authentication (in progress)
-- [ ] rtmp server in nodeJS
-- [ ] ability to show livestreams
+- [x] basic authentication 
+- [x] rtmp server in nodeJS 
+- [ ] ability to show livestreams (in progress)
 - [ ] generating streaming keys to streamers
 - [ ] generating live stream thumbnails
 
