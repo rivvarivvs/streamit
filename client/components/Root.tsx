@@ -9,7 +9,7 @@ const customHistory = require('history').createBrowserHistory()
 
 export default class Root extends React.Component {
 
-    constructor(props: {} | Readonly<{}>) {
+    constructor(props: {}) {
         super(props)
     }
 
