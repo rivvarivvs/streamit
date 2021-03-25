@@ -24,6 +24,7 @@
     "@types/react-dom": "^17.0.3",
     "@types/react-router-dom": "^5.1.7",
     "@types/session-file-store": "^1.2.1",
+    "@types/video.js": "^7.3.15",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
