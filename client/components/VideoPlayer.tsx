@@ -29,14 +29,18 @@ export default class VideoPlayer extends React.Component<any, any>{
                     }],
                     fluid: true
                 }
-            })}
-        this.player = videojs(this.videoNode, this.state.videojsOptions, function onPlayerReady() {
-            console.log('onPlayerReady', this)
-        })
-    }
+                //@ts-ignore
+            }), this.player = videojs(this.videoNode, this.state.videojsOptions, function onPlayerReady() {
+                //@ts-ignore
+                console.log('onPlayerReady', this)
+            })
+        }
+    )}
 
     componentWillMount() {
+        //@ts-ignore
         if(this.player) {
+            //@ts-ignore
             this.player.dispose()
         }
     }
@@ -47,7 +51,8 @@ export default class VideoPlayer extends React.Component<any, any>{
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-8 mx-auto mt-5">
                     {this.state.stream ? (
                         <div data-vjs-player>
-                            <video ref={node => this.videoNode = node} className="video-js vjs-big-play-centered"/>
+                            <video ref={// @ts-ignore
+                                node => this.videoNode = node} className="video-js vjs-big-play-centered"/>
                         </div>
                     ): 'Loading'}
                 </div>
